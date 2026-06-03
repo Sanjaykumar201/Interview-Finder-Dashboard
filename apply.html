@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Apply Internship</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="box">
+      <h2>Apply Internship</h2>
+
+      <p id="companyText">Selected Company: None</p>
+
+      <h3>Upload Resume</h3>
+      <input type="file" />
+
+      <button onclick="applyNow()">Apply Now</button>
+
+      <p id="status"></p>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const company = params.get("company");
+
+      document.getElementById("companyText").innerText =
+        "Selected Company: " + company;
+
+      function applyNow() {
+        document.getElementById("status").innerText = "Successfully Applied ✔";
+      }
+    </script>
+  </body>
+</html>

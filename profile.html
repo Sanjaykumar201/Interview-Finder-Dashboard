@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Profile Development</h2>
+
+      <form
+        name="profileForm"
+        method="POST"
+        onsubmit="return validateProfile();"
+      >
+        <input name="name" placeholder="Name" /><br />
+        <input name="age" placeholder="Age" /><br />
+        <input name="college" placeholder="College" /><br />
+        <input name="stream" placeholder="Stream" /><br />
+        <input name="interest" placeholder="Area of Interest" /><br />
+
+        <button type="submit">Next</button>
+      </form>
+
+      <a href="/"><button>Previous</button></a>
+    </div>
+  </body>
+</html>

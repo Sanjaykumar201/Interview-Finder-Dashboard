@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Enter Domain (Frontend / Backend / Web Development / Graphic Designer)
+      </h2>
+
+      {% if error %}
+      <p style="color: red">{{ error }}</p>
+      {% endif %}
+
+      <form method="POST">
+        <input name="domain" placeholder="Enter domain" />
+        <button type="submit">Next</button>
+      </form>
+
+      <a href="/profile"><button>Previous</button></a>
+    </div>
+  </body>
+</html>

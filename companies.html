@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Apply Soon</h2>
+
+      {% for c in companies %}
+      <div>
+        <h3>{{c.name}}</h3>
+        <p>{{c.role}}</p>
+        <p>{{c.type}}</p>
+        <p>{{c.pay}}</p>
+        <a href="/apply/{{c.name}}"><button>Apply</button></a>
+      </div>
+      <hr />
+      {% endfor %}
+
+      <a href="/domain"><button>Previous</button></a>
+      <a href="/applications"><button>Next</button></a>
+    </div>
+  </body>
+</html>
